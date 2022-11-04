@@ -149,7 +149,6 @@ footer::after {
 /* contact page */
 .contact {
   padding: 2rem 1.5rem;
-  /* background-color: red; */
 }
 .contact h1 {
   color: var(--black);
@@ -165,7 +164,7 @@ footer::after {
 input[type=text], input[type=email]{
   display: block;
   margin-block: 1rem;
-  /* font-family: var(--font-primary); */
+  font-family: var(--font-primary);
   border-radius: 5px;
   border:2px solid #D0D5DD;
   padding: 0.7rem 1rem;
