@@ -1,7 +1,6 @@
 import Home from "./components/Home";
 import Error from "./components/Error";
 import Contact from "./components/Contact";
-import Footer from "./components/Footer";
 import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 

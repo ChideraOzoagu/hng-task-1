@@ -1,10 +1,7 @@
 import React from 'react'
-import avatar from "../assets/avatar.png";
 import mobileMenu from "../assets/mobile-menu.png";
 import slack from "../assets/slack.png";
 import github from "../assets/Social icon.png";
-import zuriLogo from "../assets/Zuri.Internship_Logo.png";
-import ingressive from "../assets/I4G.png";
 import shareBtn from "../assets/share-btn.png";
 import camera from '../assets/camera-Icon.png'
 import myAvatar from '../assets/myAvatar.jpg'

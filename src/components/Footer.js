@@ -1,7 +1,6 @@
 import React from 'react'
 import zuriLogo from "../assets/Zuri.Internship_Logo.png";
 import ingressive from "../assets/I4G.png";
-// import { Outlet } from 'react-router-dom';
 
 const Footer = () => {
   return (
