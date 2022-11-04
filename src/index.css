@@ -17,13 +17,13 @@ a {
   --link-hover: #d0d5dd;
   --error-clr: #5925dc;
   --text-clr: #475467;
-  --font-primary:   font-family: inter, "sans-serif";
+  --font-primary: 'inter', "sans-serif";
   --transition-primary: all 0.2s ease-in;
 }
 
 body {
   background-color: var(--white);
-  font-family: inter, "sans-serif";
+  font-family: 'inter', "sans-serif";
 }
 .main {
   padding: 2.5rem 1.5rem;
@@ -165,7 +165,7 @@ footer::after {
 input[type=text], input[type=email]{
   display: block;
   margin-block: 1rem;
-  font-family: var(--font-primary);
+  /* font-family: var(--font-primary); */
   border-radius: 5px;
   border:2px solid #D0D5DD;
   padding: 0.7rem 1rem;
