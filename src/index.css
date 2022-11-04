@@ -209,6 +209,23 @@ input[type=checkbox] {
   outline: none;
   transition: var(--transition-primary);
 }
+.msg-success{
+  background-color: rgba(0, 128, 0, 0.6);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+  border-radius: 4px;
+  transition: all 0.2s ease-in;
+}
+.error{
+  border: 2px solid red;
+}
+.error-text{
+  color: red;
+}
+.success {
+  border: 2px solid #D0D5DD;
+}
 /* MEDIA QUERY */
 @media screen and (max-width: 767px) {
   .share-btn {
