@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, Router } from 'react-router-dom'
-import zuriLogo from "../assets/Zuri.Internship_Logo.png";
-import ingressive from "../assets/I4G.png";
+// import zuriLogo from "../assets/Zuri.Internship_Logo.png";
+// import ingressive from "../assets/I4G.png";
 
 const Error = () => {
   return (
@@ -22,11 +22,7 @@ const Error = () => {
               </Link>
           </div>
       </div>
-      <footer>
-        <img src={zuriLogo} alt="zuri logo" />
-        <p>HNG Internship 9 Frontend Task</p>
-        <img src={ingressive} alt="ingressive for good" />
-      </footer>
+      
     </div>
   )
 }

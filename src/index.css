@@ -16,8 +16,11 @@ a {
   --link-clr: #eaecf0;
   --link-hover: #d0d5dd;
   --error-clr: #5925dc;
+  --text-clr: #475467;
+  --font-primary:   font-family: inter, "sans-serif";
   --transition-primary: all 0.2s ease-in;
 }
+
 body {
   background-color: var(--white);
   font-family: inter, "sans-serif";
@@ -53,7 +56,7 @@ body {
 #slack {
   display: none;
 }
-button {
+.btn {
   width: 100%;
   background-color: var(--link-clr);
   border: 1px solid var(--link-clr);
@@ -142,6 +145,72 @@ footer::after {
   width: 20px;
   margin-right:5px ;
 }
+
+/* contact page */
+.contact {
+  padding: 2rem 1.5rem;
+  /* background-color: red; */
+}
+.contact h1 {
+  color: var(--black);
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
+}
+.contact p {
+  color: var(--text-clr);
+  padding-bottom: 1rem;
+
+}
+
+input[type=text], input[type=email]{
+  display: block;
+  margin-block: 1rem;
+  font-family: var(--font-primary);
+  border-radius: 5px;
+  border:2px solid #D0D5DD;
+  padding: 0.7rem 1rem;
+  width: 100%;
+  outline: none;
+}
+textarea{
+  display: block;
+  font-family: var(--font-primary);
+  border-radius: 5px;
+  border: 2px solid #D0D5DD;
+  padding: 0.7rem 1rem;
+  width: 100%;
+  outline: none;
+  resize: none;
+}
+#message {
+  margin: 1rem 0;
+}
+input[type=checkbox] {
+  margin-right: 0.7rem;
+  cursor: pointer;
+  width: 15px;
+  aspect-ratio: 1/1;
+}
+.agreement{
+  margin: 1rem 0;
+  display: block;
+}
+#btn__submit {
+  background-color: #1570EF;
+  color: var(--white);
+  width: 100%;
+  border: 1px solid var(--link-clr);
+  padding: 1rem;
+  font-family: inherit;
+  margin: 1rem 0;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  transition: var(--transition-primary);
+}
+/* MEDIA QUERY */
 @media screen and (max-width: 767px) {
   .share-btn {
     display: none;
@@ -213,5 +282,23 @@ footer::after {
     display: flex;
     flex-direction: reverse;
     gap: 1rem;
+  }
+  .contact {
+    padding: 5rem 10rem;
+  }
+  .flex-desktop {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+  }
+  .flex-desktop div {
+    width: 100%;
+  }
+}
+@media (min-width: 1200px){
+  .contact{
+    padding: 5rem 20rem;
+
   }
 }
