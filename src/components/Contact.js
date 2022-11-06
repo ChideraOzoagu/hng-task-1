@@ -10,49 +10,50 @@ const Contact = () => {
     message: "",
   };
   const [formData, setFormData] = useState(initalData);
-  const [successMsg, setSuccessMsg] = useState(false)
-  const [errorText, setErrorText] = useState(false)
-// handle multiple inputs
+  const [successMsg, setSuccessMsg] = useState(false);
+  const [errorText, setErrorText] = useState(false);
+  // handle multiple inputs
   const handleChange = (e) => {
-    const name = e.target.name
-    const value = e.target.value
-    setFormData({...formData, [name]: value})
-  }
-// handle submitting
+    const name = e.target.name;
+    const value = e.target.value;
+    setFormData({ ...formData, [name]: value });
+  };
+  // handle submitting
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const {firstname, lastname, email, message} = formData
+    const { firstname, lastname, email, message } = formData;
 
-    if(message === ''){
-      setErrorText(true)
-    } 
-    if(firstname && lastname && email && message){
-      setSuccessMsg(true)
-      setErrorText(false)
+    if (firstname && lastname && email && message) {
+      setSuccessMsg(true);
+      setErrorText(false);
       setFormData({
         firstname: "",
-      lastname: "",
-      email: "",
-      message: "",
-      })
+        lastname: "",
+        email: "",
+        message: "",
+      });
     }
+    if (message === "") {
+      setErrorText(true);
+    }
+    
   };
-  useEffect(()=>{
-    const timeout = setTimeout(()=>{
-      setSuccessMsg(false)
-    }, [2000])
-    return ()=>{
-      clearTimeout(timeout)
-    }
-  },[successMsg])
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setSuccessMsg(false);
+    }, [2000]);
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, [successMsg]);
   const name = "Chidera";
   return (
     <section className="contact">
       {successMsg && <h3 className="msg-success">Message delivered</h3>}
       <h1>Contact Me</h1>
       <p>Hi there, contact me to ask about anything you have in mind</p>
-      <form >
+      <form  onSubmit={handleSubmit}>
         <div className="flex-desktop">
           <div>
             <label htmlFor="firstName">First name</label>
@@ -72,7 +73,7 @@ const Contact = () => {
               type="text"
               placeholder="Enter your last name"
               id="last_name"
-              name='lastname'
+              name="lastname"
               value={formData.lastname}
               onChange={handleChange}
               required
@@ -84,7 +85,7 @@ const Contact = () => {
           type="email"
           placeholder="yourname@email.com"
           id="email"
-          name='email'
+          name="email"
           value={formData.email}
           onChange={handleChange}
           required
@@ -95,10 +96,10 @@ const Contact = () => {
           cols="30"
           rows="10"
           placeholder="Send a message, I'll reply you as soon as possible..."
-          name='message'
+          name="message"
           value={formData.message}
           onChange={handleChange}
-          className={`${errorText ? 'error': 'success'}`}
+          className={`${errorText ? "error" : "success"}`}
         ></textarea>
         {errorText && <h3 className="error-text">Please enter a message</h3>}
         <label htmlFor="agreement" className="agreement">
@@ -106,10 +107,14 @@ const Contact = () => {
           <span className="checkmark"></span>
           You agree to provide your data to {name} who may contact you.
         </label>
-        <button type="submit" id="btn__submit" onClick={handleSubmit}>
+        <button type="submit" id="btn__submit">
           Send Message
         </button>
       </form>
+      {/* <form action="">
+        <input type="text" placeholder="name" required />
+        <button type="submit">Submit</button>
+      </form> */}
       <Footer />
     </section>
   );
