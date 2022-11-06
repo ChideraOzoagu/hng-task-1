@@ -56,11 +56,11 @@ const Home = () => {
           Design Books
         </a>
       </button>
-      <button className='btn' id="contact">
-       <Link to='/contact'>
+      {/* <button className='btn' id="contact"> */}
+       <Link to='/contact' className='btn'>
        Contact Me
        </Link>
-      </button>
+      {/* </button> */}
       <div className="icons">
         <a href="https://slack.com" target="_blank">
           <img src={slack} alt="slack" />

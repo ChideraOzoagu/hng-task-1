@@ -64,7 +64,12 @@ body {
   font-family: inherit;
   margin: 12px 0;
   border-radius: 8px;
+  display: block;
+  text-align: center;
   transition: var(--transition-primary);
+  color: var(--black);
+  font-weight: 500;
+  font-size: 1rem;
   /* cursor: pointer; */
 }
 button a {
