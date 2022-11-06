@@ -111,11 +111,7 @@ const Contact = () => {
           Send Message
         </button>
       </form>
-      {/* <form action="">
-        <input type="text" placeholder="name" required />
-        <button type="submit">Submit</button>
-      </form> */}
-      <Footer />
+      {/* <Footer /> */}
     </section>
   );
 };

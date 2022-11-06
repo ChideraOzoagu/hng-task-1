@@ -69,7 +69,7 @@ const Home = () => {
           <img src={github} alt="github" />
         </a>
       </div>
-      <Footer/>
+      {/* <Footer/> */}
       
     </main>
   )
